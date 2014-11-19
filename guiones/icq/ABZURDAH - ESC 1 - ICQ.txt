@@ -1,0 +1,9 @@
+open: ICQ
+user: Abzurdah
+contact: Hogweed
+number: 2506078496
+time: 5:34
+---
+Hogweed: Hola 
+Hogweed: Me dijeron que sos muy linda
+Abzurdah: Estás equivocado

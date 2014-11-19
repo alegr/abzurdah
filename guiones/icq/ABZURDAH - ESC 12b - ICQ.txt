@@ -1,0 +1,11 @@
+open: ICQ
+user: Abzurdah
+contact: Hogweed
+number: 2506078496
+time: 3:22
+---
+Hogweed: ¿Y qué querés?
+Abzurdah: Otro uniforme.
+Hogweed: En serio, qué querés?
+Abzurdah: No sé. ¿POR?
+Hogweed: Capaz lo conseguimos.

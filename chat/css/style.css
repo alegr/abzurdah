@@ -1,0 +1,400 @@
+
+/* General */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 12px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+hr {
+    opacity: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.script {
+    display: none;
+}
+
+/* Desktop */
+
+.desktop {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #008080;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.desktop .panel {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    background: #BDBDBD;
+    border-top: 1px solid #FFF;
+    padding: 2px;
+}
+
+.desktop .panel .start {
+    border-top: 1px solid #FFF;
+    border-left: 1px solid #FFF;
+    border-bottom: 1px solid #000;
+    border-right: 1px solid #000;
+    display: inline-block;
+    font-weight: bold;
+    height: 100%;
+    padding: 4px 10px 4px 25px;
+    background-image: url(../img/start.png);
+    background-repeat: no-repeat;
+    background-position: 2px 2px;
+}
+
+/* Window */
+
+.window {
+    background: #BDBDBD;
+    padding: 2px;
+    border-top: 1px solid #FFF;
+    border-left: 1px solid #FFF;
+    border-right: 1px solid #808080;
+    border-bottom: 1px solid #808080;
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 100px;
+}
+
+.window.opened {
+    display: inline-block;
+}
+
+.window .titlebar {
+    background: #010280;
+    background: #00007b;
+    background: -moz-linear-gradient(left, #00007b 0%, #0884ce 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#00007b), color-stop(100%,#0884ce));
+    background: -webkit-linear-gradient(left, #00007b 0%,#0884ce 100%);
+    background: -o-linear-gradient(left, #00007b 0%,#0884ce 100%);
+    background: -ms-linear-gradient(left, #00007b 0%,#0884ce 100%);
+    background: linear-gradient(to right, #00007b 0%,#0884ce 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00007b', endColorstr='#0884ce',GradientType=1 );
+    color: white;
+    font-weight: bold;
+    padding: 2px;
+    height: 18px
+}
+
+.window .titlebar .text {
+    display: inline-block;
+}
+
+.window .titlebar .icon {
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+    float: left;
+    margin-right: 5px;
+}
+
+.window .titlebar .buttons {
+    float: right;
+    margin: 0;
+}
+
+.window .titlebar .buttons li {
+    height: 14px;
+    width: 15px;
+    background-color: #BCBCBC;
+    background-repeat: no-repeat;
+    background-position: 1px 1px;
+    border-top: 1px solid #FFF;
+    border-left: 1px solid #FFF;
+    border-right: 1px solid #808080;
+    border-bottom: 1px solid #808080;
+    display: inline-block;
+    padding: 0;
+    margin-left: -3px;
+}
+
+.window .titlebar .buttons .minimize {
+    background-image: url(../img/minimize.png);
+}
+
+.window .titlebar .buttons .maximize {
+    background-image: url(../img/maximize.png);
+}
+
+.window .titlebar .buttons .close {
+    background-image: url(../img/close.png);
+}
+
+.window .menu {
+    color: #000;
+    margin: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.window .menu li {
+    padding: 2px 4px;
+    display: inline-block;
+}
+
+.window .status {
+    height: 18px;
+    padding: 1px 2px;
+    margin-top: 2px;
+    border-top: 1px solid #848484;
+    border-left: 1px solid #848484;
+    border-bottom: 1px solid #FFF;
+    border-right: 1px solid #FFF;
+}
+
+/* Browser */
+
+.browser {
+    width: 75%;
+    top: 10px;
+}
+
+.browser .titlebar .icon {
+    background-image: url(../img/ie.png);
+}
+
+.browser .toolbar {
+    background-image: url(../img/tools.png);
+    background-repeat: no-repeat;
+    border-top: 1px solid #fff;
+    height: 25px;
+    background-position: 1px 1px;
+}
+
+.browser .addressbar {
+    background-image: url(../img/webicon.png);
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    background-color: #FFF;
+    background-position: 2px 2px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.browser .addressbar input {
+    border: none;
+    width: 100%;
+    padding: 2px;
+}
+
+.browser .page {
+    background: #FFF;
+}
+
+.browser iframe {
+    border: none;
+    margin: 0;
+}
+
+/* Chat */
+
+.msn {
+    width: 550px;
+}
+
+.msn .titlebar .icon {
+    background-image: url(../img/buddy.png);
+}
+
+.msn .conversation {
+    background: #0447b2;
+    padding: 3px;
+}
+
+.msn .conversation .to {
+    color: #bbc3f4;
+    padding: 0 3px 4px;
+}
+
+.msn .conversation .messages {
+    background: white;
+    height: 250px;
+    overflow-y: scroll;
+    padding: 7px;
+    margin: 0;
+    list-style: none;
+    clear: both;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    color: #666;
+}
+
+.msn .conversation .messages li {
+    margin-bottom: 10px;
+}
+
+.msn .conversation .toolbar {
+    background: #D7DEF8;
+    height: 38px;
+    margin-bottom: 3px;
+}
+
+.msn .conversation .toolbar .button {
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    display: inline-block;
+}
+
+.msn .conversation .toolbar .button .icon {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    float: left;
+}
+
+.msn .conversation .toolbar .button span {
+    display: inline-block;
+    padding-top: 3px;
+    padding-left: 6px;
+}
+
+.msn .conversation .toolbar .block .icon {
+    background-image: url(../img/block.png);
+}
+
+.msn .conversation .toolbar .font .icon {
+    background-image: url(../img/font.png);
+}
+
+.msn .conversation .toolbar .emoticon .icon {
+    background-image: url(../img/emoticon.png);
+}
+
+.msn .conversation .input {
+    width: 100%;
+    border: none;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background: #FFF;
+    overflow: auto;
+    padding: 4px;
+}
+
+.msn .conversation .input .message {
+    width: 80%;
+    border: none;
+    font-size: 12px;
+    resize: none;
+    height: 60px;
+    font-family: sans-serif;
+}
+
+.msn .conversation .input .send {
+    width: 20%;
+    height: 100%;
+    float: right;
+    height: 60px;
+}
+
+/* ICQ */
+
+.icq {
+    width: 550px;
+}
+
+.icq .titlebar .icon {
+    background-image: url(../img/icq_card.png);
+}
+
+.icq fieldset {
+    width: 99%;
+}
+
+.icq fieldset > div {
+    display: inline-block;
+}
+
+.icq fieldset span {
+    font-weight: bold;
+}
+
+.icq fieldset input {
+    border: none;
+    background: none;
+    border-top: 1px solid #848484;
+    border-left: 1px solid #848484;
+    border-bottom: 1px solid #FFF;
+    border-right: 1px solid #FFF;
+    width: 160px;
+    margin-right: 10px;
+}
+
+.icq .info {
+    background: url(../img/icq_info.png) no-repeat;
+    height: 17px;
+    margin-left: 4px;
+    margin-top: 2px;
+    position: absolute;
+    width: 17px;
+}
+
+.icq .messages {
+    background: white;
+    height: 250px;
+    overflow-y: scroll;
+    padding: 7px;
+    margin: 2px 2px 0;
+    list-style: none;
+    clear: both;
+    color: #666;
+}
+
+.icq .messages li {
+    margin-bottom: 10px;
+}
+
+.icq .message {
+    border: none;
+    margin: 5px 2px 0;
+    width: 99%;
+}
+
+.icq button {
+    text-align: center;
+    background: none;
+    border-color: #fff #000 #000 #fff;
+    border-style: solid;
+    border-width: 1px;
+    height: 30px;
+    text-align: center;
+    width: 90px;
+    margin-bottom: 2px;
+    margin-top: 4px;
+}
+
+.icq .cancel {
+    margin-left: 2px;
+}
+
+.icq .send {
+    float: right;
+    margin-right: 2px;
+}

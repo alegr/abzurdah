@@ -1,0 +1,13 @@
+open: MSN
+user: Hiedra
+contact: Alejo
+time: 11:25
+---
+Hiedra: ¿estás?
+Alejo: sí
+Hiedra: me voy a estudiar a capital
+Hiedra: vamos a estar más cerca
+Hiedra: :P
+Alejo: sigo de novio
+Hiedra: no me importa
+Hiedra: nos vemos?

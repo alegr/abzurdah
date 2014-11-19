@@ -1,0 +1,11 @@
+open: MSN
+user: Hiedra
+contact: Alejo
+time: 6:18
+---
+Hiedra: hola. cómo va?
+Alejo: cuidando a Uli
+Alejo: Romi labura a la noche
+Hiedra: querés que vaya?
+Alejo: no, mejor no
+Alejo: es un lío esta casa hoy

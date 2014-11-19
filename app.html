@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html lang='en-US'>
+<head>
+<meta charset='utf-8'>
+<title>Abzurdah</title>
+<link rel="stylesheet" type="text/css" href="chat/css/style.css">
+</head>
+
+<body>
+
+<div class="desktop">
+    <div class="panel">
+        <div class="start">Inicio</div>
+    </div>
+    <div class="browser window">
+        <div class="titlebar">
+            <div class="icon"></div>
+            <div class="text">Internet Explorer</div>
+            <ul class="buttons">
+                <li class="minimize"></li>
+                <li class="maximize"></li>
+                <li class="close"></li>
+            </ul>
+        </div>
+        <ul class="menu">
+            <li>Archivo</li>
+            <li>Editar</li>
+            <li>Ver</li>
+            <li>Ayuda</li>
+        </ul>
+        <hr>
+        <div class="toolbar"></div>
+        <div class="addressbar">
+            <input type="text" data-address-input="true">
+        </div>
+        <div class="page">
+            <iframe src="blog/admin.html" height="400px" width="100%"></iframe>
+        </div>
+    </div>
+    <div class="msn window">
+        <div class="titlebar">
+            <div class="icon"></div>
+            <div class="text"><span data-nick-text="true"></span></div>
+            <ul class="buttons">
+                <li class="minimize"></li>
+                <li class="maximize"></li>
+                <li class="close"></li>
+            </ul>
+        </div>
+        <ul class="menu">
+            <li>Archivo</li>
+            <li>Editar</li>
+            <li>Ver</li>
+            <li>Cuenta</li>
+            <li>Ayuda</li>
+        </ul>
+        <hr>
+        <div class="conversation">
+            <div class="to">
+                A: <span data-nick-text="true">Alejo</span>
+                &lt; alejo99@hotmail.com &gt;
+            </div>
+            <ul class="messages" data-messages="true">
+            </ul>
+            <div class="toolbar">
+                <div class="block button">
+                    <i class="icon"></i>
+                    <span>Bloquear</span>
+                </div>
+                <div class="font button">
+                    <i class="icon"></i>
+                    <span>Fuente</span>
+                </div>
+                <div class="emoticon button">
+                    <i class="icon"></i>
+                    <span>Emoticons</span>
+                </div>
+            </div>
+            <div class="input">
+                <textarea class="message" data-message="true"></textarea>
+                <button class="send">Enviar</button>
+            </div>
+        </div>
+        <div class="status"></div>
+    </div>
+    <div class="icq window">
+        <div class="titlebar">
+            <div class="icon"></div>
+            <div class="text"><span data-nick-text="true"></span> (Online)</div>
+            <ul class="buttons">
+                <li class="minimize"></li>
+                <li class="maximize"></li>
+                <li class="close"></li>
+            </ul>
+        </div>
+        <div class="toolbar">
+            <form>
+                <fieldset>
+                    <legend>
+                        To
+                    </legend>
+                    <div>
+                        <span>ICQ #</span>
+                        <input type="text" data-number-input="true">
+                    </div>
+                    <div>
+                        <span>Nick</span>
+                        <input type="text" data-nick-input="true">
+                    </div>
+                    <div class="info"></div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="conversation">
+            <ul class="messages" data-messages="true">
+            </ul>
+        </div>
+        <div class="input">
+            <textarea class="message" data-message="true"></textarea>
+            <button class="cancel">Cancel</button>
+            <button class="send">Send</button>
+        </div>
+    </div>
+</div>
+
+<script src='chat/js/jquery.js'></script>
+<script src='chat/js/drags.js'></script>
+<script src='chat/js/app.js'></script>
+
+<script type="text/javascript">
+
+$(function() {
+
+    var file = window.location.hash.replace('#', '');
+    $.ajax({
+        dataType: 'text',
+        url: file,
+        cache: false,
+        success: function (data) {
+            app.start(data);
+            $('.window').drags({
+                handle: '.titlebar'
+            });
+        }
+    });
+
+});
+
+</script>
+
+</body>
+</html>

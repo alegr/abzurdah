@@ -1,0 +1,79 @@
+body {
+	padding: 0;
+	margin: 0;
+	font-family: Verdana;
+	font-size: 14px;
+	color: #000;
+}
+
+.header {
+	background: url(../images/header-admin-bg.jpg) repeat-x;
+	position: relative;
+}
+.header > h1 {
+	position: absolute;
+	font-size: 32px;
+	color: #fff;
+	left: 60px;
+	top: 5px;
+	margin: 0;
+	padding: 0;
+}
+
+.form {
+	margin-top: 20px;
+	margin-left: 50px;
+}
+label {
+	font-weight: bold;
+}
+input {
+	width: 350px;
+}
+
+.row {
+	clear: both;
+	margin-bottom: 10px;
+}
+
+.compose {
+	background-color: #e1d5bf;
+	width: 600px;
+	min-height: 300px;
+	padding: 5px;
+}
+.compose .tinymce {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	float: left;
+}
+.compose .tinymce li {
+	float: left;
+}
+.compose .tinymce li img {
+}
+.compose textarea {
+	width: 590px;
+	height: 300px;
+}
+
+.button:hover,
+.button {
+	background-color: #ff7400;
+	border-color: #d85f02;
+	display: inline-block;
+	border: 1px solid;
+	padding: 5px;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.button.blue:hover,
+.button.blue {
+	background-color: #5f9aff;
+	border-color: #336abd;
+}
+
+
