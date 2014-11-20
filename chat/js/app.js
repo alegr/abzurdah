@@ -83,10 +83,11 @@ var app = {
 
             window.setTimeout(function() {
                 var iframe = $('iframe').contents();
-            
+
                 // Put HTML inside the iframe
                 iframe.find('#content').html(content.replace("\n",'<br/>'));
                 iframe.find('#textarea').val(content);
+                iframe.find('#title').val(content);
 
                 // Resize iframe
                 $('iframe').height($(window).height() - 150);
@@ -94,7 +95,29 @@ var app = {
                 // TODO: show comments
                 if (self.mode === 'detalle') {
                     comments = data.shift().split('\n');
-                    console.log(comments);
+                    // console.log(comments);
+
+                    /********************************/
+                    $.each(comments, function () {
+                        var comment = this.split(': '),
+                            nick = comment.shift(),
+                            text = comment.shift();
+
+                        if (nick) {
+                            self.messages.push({
+                                nick: nick,
+                                text: text,
+                                color: 'black',
+                                number: false,
+                                email: false
+                            });
+                        }
+
+                    });
+// console.log(self.messages);
+                    self.comment();
+                    /********************************/
+
                 }
 
             }, 1000);
@@ -200,8 +223,72 @@ var app = {
             conversation = $(self.software).find('[data-messages]');
 
         // Scroll the chat window
-        conversation.animate({
-            scrollTop: conversation.get(0).scrollHeight
-        }, 1000);
+        if (conversation.get(0)) {
+            conversation.animate({
+                scrollTop: conversation.get(0).scrollHeight
+            }, 1000);
+        }
+    },
+
+    comment: function () {
+
+        var iframe = $('iframe').contents();
+
+        var self = this,
+            message = self.messages[self.step],
+            input = iframe.find('[data-comment]');
+
+        // Abort if the message does not exists
+        if (message === undefined) {
+            return false;
+        }
+
+        // Set cursor
+        input.focus();
+        var myForm = iframe.find('#form-comment');
+
+        if (message.nick !== self.user) {
+
+            // Show incoming message after 2 seconds
+            window.setTimeout(function() {
+                self.addComment(message);
+                self.step++;
+                self.comment();
+            }, 2000);
+        } else {
+
+            // Prepare outcoming message
+            myForm.on('submit', function (e) {
+                e.preventDefault();
+
+                // If some text was entered, overwrite the default
+                if (input.val() !== '') {
+                    message.text = input.val();
+                }
+
+                // Clean up
+                input.val('').focus();
+
+                // Show message and continue
+                self.addComment(message);
+                self.step++;
+                self.comment();
+            });
+        }
+    },
+    addComment: function (message) {
+        var self = this,
+            style = (message.nick !== self.user) ? 'in' : 'out';
+
+        // Get iframe
+        var iframe = $('iframe').contents();
+    
+        // Get template and replace content
+        var template = iframe.find('.avatar-comment-indent > div:first').clone();
+        $('.comment-user', template).text(message.nick);
+        template.children(".comment-body").text(message.text);
+
+        iframe.find('#comments-block').append(template);
     }
+
 };

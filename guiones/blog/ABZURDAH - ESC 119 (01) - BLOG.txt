@@ -1,8 +1,8 @@
 open: browser
 time: 10:00
+title: Bienvenidos a Me Como A Mí
 ---
-Bienvenidos a Me Como A Mí:
-este es un sitio a favor de los desórdenes alimenticios.
+Este es un sitio a favor de los desórdenes alimenticios.
 Esto quiere decir que consideramos a la anorexia,
 la bulimia y la auto-mutilación (entre otros) como estilos de vida.
 A favor del respeto y los desórdenes alimenticios.

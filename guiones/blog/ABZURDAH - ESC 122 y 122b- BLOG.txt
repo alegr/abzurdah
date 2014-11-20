@@ -1,7 +1,9 @@
 open: browser
 time: 10:00
+user: Lágrima
+title: Perfección
 ---
-Perfección es una palabra demasiado grande, aunque muchas veces la haya pronunciado con una lejana liviandad; tan fuerte es que no conocemos su significado en bruto. Nunca vimos a alguien perfecto, nunca conocimos una pareja perfecta, no vivimos jamás en un mundo perfecto, nunca nada salió perfectamente.
+Es una palabra demasiado grande, aunque muchas veces la haya pronunciado con una lejana liviandad; tan fuerte es que no conocemos su significado en bruto. Nunca vimos a alguien perfecto, nunca conocimos una pareja perfecta, no vivimos jamás en un mundo perfecto, nunca nada salió perfectamente.
 Somos ignorantes de aquello que es perfecto: el cometido de mecomoami era ese, que cada uno creará su propia perfección.
 ---
 Lágrima: No comer es un derecho y lo ejerzo    

@@ -1,9 +1,10 @@
 open: browser
 time: 10:00
+title: Wannabies go home
 ---
-si pensas que la
-anorexia es una moda o querés
-averiguar de qué
-se trata, no entres a hasta página.
+Si pensás que la
+anorexia es una moda o querés
+averiguar de qué
+se trata, no entrés a hasta pá́gina.
 Esto es en serio, nosotras queremos
 ser perfectas

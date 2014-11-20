@@ -1,5 +1,5 @@
 open: browser
 time: 10:00
+title: Diferenciate de todo el mundo
 ---
-Diferenciate de todo el mundo.
-Comer lo puede hacer cualquiera. Desde un médico hasta un albañil. Vos sos alguien diferente a esas personas. Vos podes vivir de vos misma. De tu propia pureza. Que nadie se te acerque y corrompa el estado divino en el que estas.
+Comer lo puede hacer cualquiera. Desde un mé́dico hasta un albañil. Vos sos alguien diferente a esas personas. Vos podés vivir de vos misma. De tu propia pureza. Que nadie se te acerque y corrompa el estado divino en el que estás.

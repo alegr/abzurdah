@@ -214,6 +214,15 @@ float: right;
 #blog-pager {
 text-align: center;
 }
+#comentarios ul {
+	list-style-type: none;
+}
+#comentarios li {
+}
+.avatar-comment-indent > div:first-child {
+	display: none;
+}
+
 /* Sidebar Content
 ----------------------------------------------- */
 .sidebar {

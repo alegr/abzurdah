@@ -1,0 +1,6 @@
+
+- Agregar foto de perfil en MSN
+- Agregar perfil ampliado en el blog
+- Publish post lleva al detalle de ese post
+- Agregar los titles cuando los reciba
+

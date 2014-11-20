@@ -1,11 +1,13 @@
 open: browser
 time: 10:00
+user: Lágrima
+title: Ana, nuestra diosa
 ---
 ¿Quién puede saber más de anorexia que nosotras, las propias anoréxicas?
-Aseguro que ningún medio, medico, psicólogo o psiquiatra.
+Aseguro que ningún medio, médico, psicólogo o psiquiatra.
 ¿Quién puede saber más de cáncer que una persona que lo sufre?
-¿Quien puede saber más de amor a los hijos que una persona que es madre?
-¿Quien puede saber lo que es el amor si nunca lo sintió?
+¿Quién puede saber más de amor a los hijos que una persona que es madre?
+¿Quién puede saber lo que es el amor si nunca lo sintió?
 ¿Qué clase de médicos puede entender lo que las anoréxicas sentimos y vivimos si nunca fue anoréxico?
 Yo puedo estudiar el comportamiento de las aves y sin embargo nunca voy a saber como se siente volar.
 Cursi pero cierto, no hay palabras de más en mi discurso.
