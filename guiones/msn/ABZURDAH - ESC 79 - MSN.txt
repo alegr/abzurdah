@@ -2,7 +2,8 @@ open: MSN
 user: Hiedra
 contact: Alejo
 time: 11:25
-background: img/background/FONDO_02.jpg
+background: FONDO_02.jpg
+avatar: Perfil_Alejo.jpg
 ---
 Hiedra: ¿estás?
 Alejo: sí

@@ -3,5 +3,6 @@ user: Hiedra
 contact: Alejo
 time: 02:09
 background: FONDO_02.jpg
+avatar: ALEJOyMARINA_msn.gif
 ---
 Hiedra: Hijo de puta
