@@ -37,7 +37,8 @@ var app = {
             messages,
             currentNick = '',
             nicks = [],
-            software;
+            software,
+            comments;
         data = data.split('---');
 
         // Set configuration options
@@ -89,6 +90,13 @@ var app = {
 
                 // Resize iframe
                 $('iframe').height($(window).height() - 150);
+
+                // TODO: show comments
+                if (self.mode === 'detalle') {
+                    comments = data.shift().split('\n');
+                    console.log(comments);
+                }
+
             }, 1000);
         }
     },
