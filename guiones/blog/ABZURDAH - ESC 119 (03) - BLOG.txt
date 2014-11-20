@@ -1,5 +1,9 @@
+open: browser
+time: 10:00
+post: blog/admin.html
+address: http://mecomoami.blogspot.com/admin/
 title: 
-
+---
 si pensas que la
 anorexia es una moda o querés
 averiguar de qué

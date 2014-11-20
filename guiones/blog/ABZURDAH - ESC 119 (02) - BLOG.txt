@@ -1,5 +1,9 @@
+open: browser
+time: 10:00
+post: blog/admin.html
+address: http://mecomoami.blogspot.com/admin/
 title: 
-
+---
 No teníamos que estar solas,
 teníamos que apoyarnos. Y por eso
 cree mi blog. Y mi alter ego,

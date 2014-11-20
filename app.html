@@ -137,6 +137,19 @@ $(function() {
         url: file,
         cache: false,
         success: function (data) {
+
+            // Set configuration options
+            config = data.shift().split('\n');
+            $.each(config, function () {
+                var action = this.split(': '),
+                    method = action.shift(),
+                    params = action.shift();
+                if ($.isFunction(app[method])) {
+                    app[method](params);
+                }
+            });
+
+
             app.start(data);
             $('.window').drags({
                 handle: '.titlebar'

@@ -108,20 +108,13 @@ type="automatic" default="right">
 										<div class='post hentry uncustomized-post-template' itemprop='blogPost' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
 											<a name='990593195156787113'></a>
 											<h3 class='post-title entry-title' itemprop='name'>
-												<a href='detalle.html'>BIENVENIDA</a>
+												<a href='detalle.html' id="title"></a>
 											</h3>
 											<div class='post-header'>
 												<div class='post-header-line-1'></div>
 											</div>
-											<div class='post-body entry-content' id='post-body-990593195156787113' itemprop='description articleBody'>
+											<div class='post-body entry-content' id='content' itemprop='description articleBody'>
 <!-- imagen -->
-												<a href="#">
-													<img id="BLOGGER_PHOTO_ID_5214351484342391234" style="DISPLAY: block; MARGIN: 0px auto 10px; CURSOR: hand; TEXT-ALIGN: center" alt="" src="images/img1.jpg" border="0" />
-												</a>
-												<br />
-												<div align="center">
-													<span style="font-family:trebuchet ms;color:#000000;">Bienvenidas a Me como a mí 2: éste es un sitio a favor de la anorexia, la bulimia y la automutilación o self injury. Si no estás segura o estás en tratamiento te pido que cierres<br />esta página. Los desórdenes de alimentación son algo serio, así que si crees que esto es una moda te repito, cierra esta página. Bienvenidas princesas.</span>
-												</div>
 												<br />
 												<div><br /></div>
 												<br />
@@ -304,5 +297,53 @@ Hola Clara!! estoy super feliz de que por fin alguien que REALMENTE ME ENTIENDE 
 	</div>
 </div>
 </div>
+
+<script src='../chat/js/jquery.js'></script>
+<script src='../chat/js/drags.js'></script>
+<script src='../chat/js/app.js'></script>
+<script type="text/javascript">
+
+$(function() {
+
+    var file = window.location.hash.replace('#', '');
+    $.ajax({
+        dataType: 'text',
+        url: file,
+        cache: false,
+        success: function (data) {
+
+            myData = data.split('---');
+
+            // Get configuration options
+            var config = [];
+            configVars = myData.shift().split('\n');
+            var content = myData.shift();
+
+            $.each(configVars, function () {
+                var action = this.split(': '),
+                    method = action.shift(),
+                    params = action.shift();
+                    config[method] = params;
+            });
+
+            // Set params
+            $('#title').html(config["title"]);
+            $('#content').html(content.replace("\n",'<br/>'));
+console.log(config["title"]);
+console.log(content);
+
+            var comments = myData.shift();
+            if (comments) {
+                app.start([configVars,comments]);
+            }
+
+
+        }
+    });
+
+});
+
+</script>
+
 </body>
 </html>

@@ -3,98 +3,147 @@
 
 <head>
 
-	<link href='images/favicon.ico' rel='icon' type='image/x-icon'/>
-	<title>Nuevo post</title>
+    <link href='images/favicon.ico' rel='icon' type='image/x-icon'/>
+    <title>Nuevo post</title>
 
-	<link type='text/css' rel='stylesheet' href='css/admin.css' />
+    <link type='text/css' rel='stylesheet' href='css/admin.css' />
 </head>
 
 
 <body>
 
-	<div class="container">
-		<div class="header">
-			<img src="images/header-admin.jpg">
-			<h1>Me como a mi</h1>
+    <div class="container">
+        <div class="header">
+            <img src="images/header-admin.jpg">
+            <h1>Me como a mi</h1>
 
-			<div class="links">
-				<a href="#"></a>
-			</div>
-		</div>
+            <div class="links">
+                <a href="#"></a>
+            </div>
+        </div>
 
-		<div class="content">
+        <div class="content">
 
-			<div class="form">
-				<div class="row">
-					<label>Title:</label>
-					<input type="text">
-				</div>
+            <div class="form">
+                <div class="row">
+                    <label>Title:</label>
+                    <input type="text" id="title">
+                </div>
 
-				<div class="row">
+                <div class="row">
 
-					<div class="compose">
+                    <div class="compose">
 
-						<ul class="tinymce">
-							<li>
-								<select>
-									<option>Font</option>
-								</select>
-							</li>
-							<li>
-								<img src="images/tinymce/bold.gif">
-							</li>
-							<li>
-								<img src="images/tinymce/centre.gif">
-							</li>
-							<li>
-								<img src="images/tinymce/italic.gif">
-							</li>
-							<li>
-								<img src="images/tinymce/justifyfull.gif">
-							</li>
-							<li>
-								<img src="images/tinymce/left_just.gif">
-							</li>
-							<li>
-								<img src="images/tinymce/list.gif">
-							</li>
-							<li>
-								<img src="images/tinymce/numbered_list.gif">
-							</li>
-							<li>
-								<img src="images/tinymce/right_just.gif">
-							</li>
-							<li>
-								<img src="images/tinymce/underline.gif">
-							</li>
-						</ul>
+                        <ul class="tinymce">
+                            <li>
+                                <select>
+                                    <option>Font</option>
+                                </select>
+                            </li>
+                            <li>
+                                <img src="images/tinymce/bold.gif">
+                            </li>
+                            <li>
+                                <img src="images/tinymce/centre.gif">
+                            </li>
+                            <li>
+                                <img src="images/tinymce/italic.gif">
+                            </li>
+                            <li>
+                                <img src="images/tinymce/justifyfull.gif">
+                            </li>
+                            <li>
+                                <img src="images/tinymce/left_just.gif">
+                            </li>
+                            <li>
+                                <img src="images/tinymce/list.gif">
+                            </li>
+                            <li>
+                                <img src="images/tinymce/numbered_list.gif">
+                            </li>
+                            <li>
+                                <img src="images/tinymce/right_just.gif">
+                            </li>
+                            <li>
+                                <img src="images/tinymce/underline.gif">
+                            </li>
+                        </ul>
 
+                        <textarea id="textarea"></textarea>
+<!--
 <textarea>Ana, conocida por los doctores como anorexia nerviosa, es un desorden alimenticio o un estilo de vida, segun se lo quiera ver, o segun se lo viva. 
 
 Depende. 
 
 La anorexia es un desorden alimenticio en el cual una persona intencionalmente pasa hambre o restringe la comida que come aunque se siente hambriento, porque quiere llegar a llegar a algun peso en especial o quiere mantener el peso que es menor de lo considerado "normal". 
 </textarea>
+-->
+                    </div>
 
-					</div>
+                </div>
 
-				</div>
+                <div class="row">
 
-				<div class="row">
+                    <a href="#" class="button orange">Publish post</a>
+                    <a href="#" class="button blue">Save now</a>
 
-					<a href="#" class="button orange">Publish post</a>
-					<a href="#" class="button blue">Save now</a>
+                </div>
 
-				</div>
+            </div>
 
-			</div>
+        </div>
 
-		</div>
+        <div class="footer">
+        </div>
 
-		<div class="footer">
-		</div>
+    </div>
 
-	</div>
+
+<script src='../chat/js/jquery.js'></script>
+<script src='../chat/js/drags.js'></script>
+<script src='../chat/js/app.js'></script>
+<script type="text/javascript">
+
+$(function() {
+
+    var file = window.location.hash.replace('#', '');
+    $.ajax({
+        dataType: 'text',
+        url: file,
+        cache: false,
+        success: function (data) {
+
+            myData = data.split('---');
+
+            // Get configuration options
+            var config = [];
+            configVars = myData.shift().split('\n');
+            var content = myData.shift();
+
+            $.each(configVars, function () {
+                var action = this.split(': '),
+                    method = action.shift(),
+                    params = action.shift();
+                    config[method] = params;
+            });
+
+            // Set params
+            $('#title').val(config["title"]);
+            $('#textarea').val(content);
+
+            var comments = myData.shift();
+            if (comments) {
+                app.start([configVars,comments]);
+            }
+
+
+        }
+    });
+
+});
+
+</script>
+
 </body>
 
 

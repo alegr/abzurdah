@@ -1,15 +1,26 @@
 open: browser
-user: Lagrima
 time: 10:00
+post: blog/admin.html
+address: http://mecomoami.blogspot.com/admin/
+usuario: Lágrima
 ---
-Lagrima: Quod me nutrit me destruit. Lo que me alimenta me destruye.
-Lagrima: La princesa esta encerrada en la torre. El principe se fue a la mierda. Otra noche sola!
+¿Quién puede saber más de anorexia que nosotras, las propias anoréxicas?
+Aseguro que ningún medio, medico, psicólogo o psiquiatra.
+¿Quién puede saber más de cáncer que una persona que lo sufre?
+¿Quien puede saber más de amor a los hijos que una persona que es madre?
+¿Quien puede saber lo que es el amor si nunca lo sintió?
+¿Qué clase de médicos puede entender lo que las anoréxicas sentimos y vivimos si nunca fue anoréxico?
+Yo puedo estudiar el comportamiento de las aves y sin embargo nunca voy a saber como se siente volar.
+Cursi pero cierto, no hay palabras de más en mi discurso.
+---
+Lágrima: Quod me nutrit me destruit. Lo que me alimenta me destruye.”
+Lágrima: La princesa está encerrada en la torre. El príncipe se fue a la mierda. Otra noche sola!
 Marisa: Nooo! Somos miles. Millones y estamos con vos.
-Johana: Los hombres son como la comida. No los necesitamos.
-Lagrima: Quiero que me extrañe, que sienta mi ausencia...
-Johana: No lo llames por un tiempo.
-Lagrima: Y si no me llama mas?
+Johana: Los hombres son como la comida.No los necesitamos.    
+Lágrima: Quiero que me extrañe, que sienta mi ausencia...
+Johana: No lo llamés por un tiempo.
+Lágrima: Y si no me llamas mas?
 Johana: No llames!
-Mariana: Lagrima. Hola. Quería saber si comiendo una manzana por dia estaba fuera de peligro.
-Lagrima: No sé, Mariana. Hoy no estoy para dar consejos. Yo como las calorias de una manzana por semana.
+Mariana: Lagrima. Hola. Quería saber sí comiendo una manzana por dia estaba fuera de peligro.
+Lágrima: No sé, Mariana. Hoy no estoy para dar consejos. Yo como las calorías de una manzana por semana.
 Mariana: En serio?

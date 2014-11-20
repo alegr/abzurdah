@@ -1,11 +1,13 @@
+open: browser
+time: 10:00
+post: blog/admin.html
+address: http://mecomoami.blogspot.com/admin/
 usuario: Lágrima
 title: 
-
+---
 Perfección es una palabra demasiado grande, aunque muchas veces la haya pronunciado con una lejana liviandad; tan fuerte es que no conocemos su significado en bruto. Nunca vimos a alguien perfecto, nunca conocimos una pareja perfecta, no vivimos jamás en un mundo perfecto, nunca nada salió perfectamente.
 Somos ignorantes de aquello que es perfecto: el cometido de mecomoami era ese, que cada uno creará su propia perfección.
-
 ---
-
 Lágrima: No comer es un derecho y lo ejerzo    
 Lágrima: Nadie esta obligado a morirse de hambre
 Johana: ¿Y como hago?
@@ -27,5 +29,3 @@ Marta: Busca ayuda
 Lágrima: Marta, cualquier mujer prefiere ser estúpida o mala, en vez de gorda.
 Montse: Aqui somos de la realeza, nos dicen princesas...
 Lágrima: Somos princesas...
-
-
