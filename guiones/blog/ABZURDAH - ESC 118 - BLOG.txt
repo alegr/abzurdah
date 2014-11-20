@@ -1,5 +1,6 @@
 open: browser
 time: 10:00
 title: Reconocernos
+background: FONDO_02.jpg
 ---
 Somos muchas, entre nosotras nos reconocemos. Si nos leen la mente, todas pensamos lo mismo: “nunca se es demasiado flaca”.

@@ -3,5 +3,6 @@ user: Abzurdah
 contact: Hogweed
 number: 2506078496
 time: 11:30
+background: FONDO_01.jpg
 ---
 Hogweed: ¿Llegaste bien, hermosa? 

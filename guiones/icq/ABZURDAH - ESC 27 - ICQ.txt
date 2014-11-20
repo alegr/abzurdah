@@ -1,8 +1,9 @@
-open: ICQ
+ open: ICQ
 user: Abzurdah
 contact: Hogweed
 number: 2506078496
 tiempo: 11:23
+background: FONDO_01.jpg
 ---
 Hogweed: Preciosa, no tengas miedo.
 Abzurdah: Es que me pasa de todo con vos...

@@ -268,6 +268,7 @@ var app = {
 
                 // Clean up
                 input.val('').focus();
+                myForm.off('submit');
 
                 // Show message and continue
                 self.addComment(message);

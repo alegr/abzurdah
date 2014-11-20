@@ -2,5 +2,6 @@ open: MSN
 user: Hiedra
 contact: Alejo
 time: 02:09
+background: FONDO_02.jpg
 ---
 Hiedra: Hijo de puta

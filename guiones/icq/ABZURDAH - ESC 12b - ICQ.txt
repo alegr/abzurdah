@@ -3,6 +3,7 @@ user: Abzurdah
 contact: Hogweed
 number: 2506078496
 time: 3:22
+background: FONDO_01.jpg
 ---
 Hogweed: ¿Y qué querés?
 Abzurdah: Otro uniforme.

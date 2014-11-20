@@ -1,6 +1,7 @@
 open: browser
 time: 10:00
 title: No tenemos que estar solas
+background: FONDO_02.jpg
 ---
 Tenemos que apoyarnos. Y por eso
 cree mi blog. Y a Lá́grima, el guru virtual que

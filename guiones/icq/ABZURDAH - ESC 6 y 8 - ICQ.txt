@@ -3,11 +3,12 @@ user: Abzurdah
 contact: Hogweed
 number: 2506078496
 time: 11:14
+background: FONDO_01.jpg
 ---
 Hogweed: Olvidate de ese pibe
 Hogweed: Yo a vos nunca te cambiaría por otra
 Abzurdah: Gracias.
-Abzurdah: Pero ya no aguanto mas, me quiero de ir del colegio...
+Abzurdah: Pero ya no aguanto mas, me quiero ir del colegio...
 Hogweed: Y entonces andate
 Hogweed: El peor arrepentimiento es el de las cosas que no nos animamos a hacer
 Abzurdah: Tenés razón. 

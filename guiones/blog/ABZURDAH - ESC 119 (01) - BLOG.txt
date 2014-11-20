@@ -1,6 +1,7 @@
 open: browser
 time: 10:00
 title: Bienvenidos a Me Como A Mí
+background: FONDO_02.jpg
 ---
 Este es un sitio a favor de los desórdenes alimenticios.
 Esto quiere decir que consideramos a la anorexia,

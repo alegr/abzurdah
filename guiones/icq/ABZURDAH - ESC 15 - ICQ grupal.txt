@@ -3,6 +3,7 @@ user: Abzurdah
 contact: Barbarella, Mortadelo, Travis, r2d2, Kitty
 number: 1666607552, 2193890128, 4365766777, 4567890900, 1666607552, 4567890900
 time: 09:50
+background: FONDO_01.jpg
 ---
 Barbarella: a qué hora quedaron?
 Mortadelo: a las 7 o las 8?

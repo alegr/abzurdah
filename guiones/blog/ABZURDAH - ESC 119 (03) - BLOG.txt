@@ -1,10 +1,11 @@
 open: browser
 time: 10:00
 title: Wannabies go home
+background: FONDO_02.jpg
 ---
 Si pensás que la
 anorexia es una moda o querés
 averiguar de qué
-se trata, no entrés a hasta pá́gina.
+se trata, no entrés a hasta página.
 Esto es en serio, nosotras queremos
 ser perfectas
