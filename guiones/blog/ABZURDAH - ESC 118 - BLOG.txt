@@ -1,7 +1,4 @@
 open: browser
 time: 10:00
-post: blog/admin.html
-address: http://mecomoami.blogspot.com/admin/
-title: 
 ---
 Había otras como yo, entre nosotras nos reconocíamos. Si nos leían la mente, todas pensábamos lo mismo: “nunca se es demasiado flaca”.

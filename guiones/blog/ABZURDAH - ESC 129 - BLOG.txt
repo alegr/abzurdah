@@ -1,8 +1,5 @@
 open: browser
 time: 10:00
-post: blog/admin.html
-address: http://mecomoami.blogspot.com/admin/
-usuario: Lágrima
 ---
 ¿Quién puede saber más de anorexia que nosotras, las propias anoréxicas?
 Aseguro que ningún medio, medico, psicólogo o psiquiatra.

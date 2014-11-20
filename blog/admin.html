@@ -84,8 +84,8 @@ La anorexia es un desorden alimenticio en el cual una persona intencionalmente p
 
                 <div class="row">
 
-                    <a href="#" class="button orange">Publish post</a>
-                    <a href="#" class="button blue">Save now</a>
+                    <a class="button orange">Publish post</a>
+                    <a class="button blue">Save now</a>
 
                 </div>
 
@@ -99,50 +99,6 @@ La anorexia es un desorden alimenticio en el cual una persona intencionalmente p
     </div>
 
 
-<script src='../chat/js/jquery.js'></script>
-<script src='../chat/js/drags.js'></script>
-<script src='../chat/js/app.js'></script>
-<script type="text/javascript">
-
-$(function() {
-
-    var file = window.location.hash.replace('#', '');
-    $.ajax({
-        dataType: 'text',
-        url: file,
-        cache: false,
-        success: function (data) {
-
-            myData = data.split('---');
-
-            // Get configuration options
-            var config = [];
-            configVars = myData.shift().split('\n');
-            var content = myData.shift();
-
-            $.each(configVars, function () {
-                var action = this.split(': '),
-                    method = action.shift(),
-                    params = action.shift();
-                    config[method] = params;
-            });
-
-            // Set params
-            $('#title').val(config["title"]);
-            $('#textarea').val(content);
-
-            var comments = myData.shift();
-            if (comments) {
-                app.start([configVars,comments]);
-            }
-
-
-        }
-    });
-
-});
-
-</script>
 
 </body>
 

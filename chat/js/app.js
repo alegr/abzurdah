@@ -74,7 +74,28 @@ var app = {
         // Start blog
         if (self.software === '.browser') {
 
+            // Get post text
+            content = data.shift();
+
+            // Set iframe source
+            $('iframe').attr('src', 'blog/' + self.mode + '.html');
+
+            window.setTimeout(function() {
+                var iframe = $('iframe').contents();
+            
+                // Put HTML inside the iframe
+                iframe.find('#content').html(content.replace("\n",'<br/>'));
+                iframe.find('#textarea').val(content);
+
+                // Resize iframe
+                $('iframe').height($(window).height() - 150);
+            }, 1000);
         }
+    },
+    mode: function (mode) {
+
+        // Set browser mode
+        this.mode = mode;
     },
     open: function (software) {
         var software = '.' + software.toLowerCase();

@@ -31,10 +31,10 @@
         <hr>
         <div class="toolbar"></div>
         <div class="addressbar">
-            <input type="text" data-address-input="true">
+            <input type="text" data-address-input="true" value="http://mecomoami.blogspot.com">
         </div>
         <div class="page">
-            <iframe src="blog/admin.html" height="400px" width="100%"></iframe>
+            <iframe height="500px" width="100%"></iframe>
         </div>
     </div>
     <div class="msn window">
@@ -131,12 +131,20 @@
 
 $(function() {
 
-    var file = window.location.hash.replace('#', '');
+    var main = window.location.hash.replace('#', '').split('|'),
+        file = main.shift(),
+        mode;
+    if (main.length > 0) {
+        mode = main.shift();
+    }
     $.ajax({
         dataType: 'text',
         url: file,
         cache: false,
         success: function (data) {
+            if (mode) {
+                app.mode(mode);
+            }
             app.start(data);
             $('.window').drags({
                 handle: '.titlebar'
