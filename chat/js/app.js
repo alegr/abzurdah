@@ -80,7 +80,6 @@ var app = {
 
             // Set iframe source
             $('iframe').attr('src', 'blog/' + self.mode + '.html');
-
             window.setTimeout(function() {
                 var iframe = $('iframe').contents();
 
@@ -92,17 +91,13 @@ var app = {
                 // Resize iframe
                 $('iframe').height($(window).height() - 150);
 
-                // TODO: show comments
+                // Show comments
                 if (self.mode === 'detalle') {
                     comments = data.shift().split('\n');
-                    // console.log(comments);
-
-                    /********************************/
                     $.each(comments, function () {
                         var comment = this.split(': '),
                             nick = comment.shift(),
                             text = comment.shift();
-
                         if (nick) {
                             self.messages.push({
                                 nick: nick,
@@ -112,14 +107,9 @@ var app = {
                                 email: false
                             });
                         }
-
                     });
-// console.log(self.messages);
                     self.comment();
-                    /********************************/
-
                 }
-
             }, 1000);
         }
     },
@@ -159,9 +149,21 @@ var app = {
     },
     address: function (address) {
 
-        // Set the contact's number
+        // Set the browser's address
         var software = $(this.software);
         software.find('[data-address-input]').val(address);
+    },
+    background: function (image) {
+
+        // Set the wallpaper image
+        var wallpaper = 'chat/img/background/' + image;
+        $('.desktop').css('background-image', 'url(' + wallpaper + ')');
+    },
+    avatar: function (image) {
+
+        // Set the avatar image
+        var wallpaper = 'chat/img/avatar/' + image;
+        $('[data-avatar-image]').css('background-image', 'url(' + wallpaper + ')');
     },
     chat: function () {
         var self = this,
@@ -175,7 +177,6 @@ var app = {
 
         // Set cursor
         input.focus();
-
         if (message.nick !== self.user) {
 
             // Show incoming message after 2 seconds
@@ -229,12 +230,9 @@ var app = {
             }, 1000);
         }
     },
-
     comment: function () {
-
-        var iframe = $('iframe').contents();
-
         var self = this,
+            iframe = $('iframe').contents(),
             message = self.messages[self.step],
             input = iframe.find('[data-comment]');
 
@@ -279,17 +277,13 @@ var app = {
     },
     addComment: function (message) {
         var self = this,
-            style = (message.nick !== self.user) ? 'in' : 'out';
+            iframe = $('iframe').contents(),
+            style = (message.nick !== self.user) ? 'in' : 'out',
+            template = iframe.find('.avatar-comment-indent > div:first').clone();
 
-        // Get iframe
-        var iframe = $('iframe').contents();
-    
-        // Get template and replace content
-        var template = iframe.find('.avatar-comment-indent > div:first').clone();
+        // Replace template content
         $('.comment-user', template).text(message.nick);
         template.children(".comment-body").text(message.text);
-
         iframe.find('#comments-block').append(template);
     }
-
 };

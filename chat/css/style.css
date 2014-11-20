@@ -37,7 +37,6 @@ hr {
     left: 0;
     right: 0;
     background-color: #008080;
-    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -224,6 +223,7 @@ hr {
 .msn .conversation {
     background: #0447b2;
     padding: 3px;
+    overflow: auto;
 }
 
 .msn .conversation .to {
@@ -312,6 +312,24 @@ hr {
     height: 100%;
     float: right;
     height: 60px;
+}
+
+.msn .main {
+    width: 430px;
+    float: left;
+}
+
+.msn .avatars {
+    float: right;
+}
+
+.msn .avatars .you {
+    height: 100px;
+    width: 100px;
+    margin: 20px 2px 0 auto;
+    background-image: url(http://www.sherv.net/screens/messenger-80/msn8-dp3.png);
+    border-radius: 10px;
+    background-size: cover;
 }
 
 /* ICQ */
