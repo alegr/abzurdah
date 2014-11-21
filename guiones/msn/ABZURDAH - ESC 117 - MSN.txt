@@ -3,7 +3,7 @@ user: Hiedra
 contact: Alejo
 time: 6:18
 background: FONDO_02.jpg
-avatar: Perfil_Alejo.jpg
+avatar: PerfilAlejoyMarina.jpg
 ---
 Hiedra: hola. cómo va?
 Alejo: cuidando a Uli

@@ -3,7 +3,7 @@ user: Hiedra
 contact: Alejo
 time: 11:25
 background: FONDO_02.jpg
-avatar: Perfil_Alejo.jpg
+avatar: PerfilAlejoyMarina.jpg
 ---
 Hiedra: ¿estás?
 Alejo: sí
