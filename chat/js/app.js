@@ -87,14 +87,26 @@ var app = {
                 // Put HTML inside the iframe
                 iframe.find('#content').html(content.replace("\n",'<br/>'));
                 iframe.find('#textarea').val(content);
-                iframe.find('#title').val(content);
+                if (self.title) {
+                    iframe.find('#title').val(self.title);
+                    iframe.find('#title-content').text(self.title);
+                }
+
+                if (self.mode === 'admin') {
+                    iframe.find('#publish-link').on('click', function(ev){
+                        ev.preventDefault();
+                        window.location = window.location.href.replace('admin', 'detalle');
+                        window.location.reload();
+                    })
+                }
 
                 // Resize iframe
                 $('iframe').height($(window).height() - 150);
 
                 // TODO: show comments
-                if (self.mode === 'detalle') {
-                    comments = data.shift().split('\n');
+                var myComments = data.shift();
+                if ( (self.mode === 'detalle') && (myComments) ) {
+                    comments = myComments.split('\n');
                     // console.log(comments);
 
                     /********************************/
@@ -143,6 +155,16 @@ var app = {
 
         // Set the logged user data
         this.user = nick;
+    },
+    script: function (script) {
+
+        // Set the logged user data
+        this.script = script;
+    },
+    title: function (title) {
+
+        // Set the logged user data
+        this.title = title;
     },
     contact: function (nicks) {
 

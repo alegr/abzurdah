@@ -142,6 +142,8 @@ $(function() {
         url: file,
         cache: false,
         success: function (data) {
+            data = 'script: '+file+"\n"+data;
+
             if (mode) {
                 app.mode(mode);
             }
