@@ -238,6 +238,8 @@ var app = {
         var self = this,
             style = (message.nick !== self.user) ? 'in' : 'out';
 
+        message.text = message.text.replace(':P','<img src="chat/img/lengua.gif">');
+
         // Add the message to the chat window
         $(self.software).find('[data-messages]').append(
             '<li class="' + style +'">' + message.nick +' dice:<br><span style="color: ' + message.color + '">' + message.text + '</span></li>'
