@@ -29,6 +29,9 @@ var app = {
         },
         Hiedra: {
             color: 'red'
+        },
+        system: {
+            color: 'black'
         }
     },
     start: function (data) {
@@ -202,7 +205,9 @@ var app = {
 
         // Set cursor
         input.focus();
-        if (message.nick !== self.user) {
+        if (message.nick == 'system') {
+            app[message.text]();
+        } else if (message.nick !== self.user) {
 
             // Show incoming message after 2 seconds
             window.setTimeout(function() {
@@ -233,6 +238,20 @@ var app = {
                 }
             });
         }
+    },
+    offline: function () {
+            var self = this;
+console.log('offline');
+        window.setTimeout(function() {
+            // Change history color
+            $(self.software).find('.messages').css({'background-color': '#aaa'});
+            // Change input color
+            $(self.software).find('.input').css({'background-color': '#aaa'});
+            $(self.software).find('.message').css({'background-color': '#aaa'});
+            $(self.software).find('.input button').attr('disabled', 'disabled');
+            // Show offline message
+            $(self.software).find('.offline').css({'display': 'block'});
+        }, 2000);
     },
     talk: function (message) {
         var self = this,
