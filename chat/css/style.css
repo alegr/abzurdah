@@ -47,6 +47,7 @@ hr {
     background: #BDBDBD;
     border-top: 1px solid #FFF;
     padding: 2px;
+display: none;
 }
 
 .desktop .panel .start {
